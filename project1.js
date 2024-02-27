@@ -6,7 +6,7 @@ button.addEventListener('click', async (e)=>{
     const url = `https://hindi-jokes-api.onrender.com/jokes?api_key=${apikey}`
     const response = await fetch(url);
     const data = await response.json();
-    word.innerText = data.jokeContent
+    word.innerText = `" ${data.jokeContent} "`
     writer.innerText = data.created_by
 
 })
